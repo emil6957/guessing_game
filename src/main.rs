@@ -6,12 +6,13 @@ use std::io;
 
 fn main() {
     println!("Guess the number");
-    println!("Input a guess: ");
 
     let secret_number = rand::thread_rng().gen_range(1..101);
-    let mut input = String::new();
 
     loop {
+        println!("Input a guess: ");
+        let mut input = String::new();
+
         io::stdin()
             .read_line(&mut input)
             .expect("failed to read input");
